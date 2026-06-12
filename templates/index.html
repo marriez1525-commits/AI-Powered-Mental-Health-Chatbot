@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MINDCARE AI | Mental Health System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">🧠 MINDCARE.AI</div>
+    <div class="nav-links">
+        <span>SCAN</span>
+        <span>REPORT</span>
+        <span>SUPPORT</span>
+    </div>
+</nav>
+
+<div class="container">
+
+    <div class="hero">
+        <h2 class="subtitle">⚡ NEURAL MENTAL ANALYSIS SYSTEM</h2>
+        <h1 class="title">
+            YOUR MIND. OUR AI.<br>REAL-TIME EMOTION DETECTION.
+        </h1>
+        <p class="desc">
+            Enter your thoughts and let AI analyze your mental state instantly.
+        </p>
+    </div>
+
+    <div class="card">
+
+        <textarea id="user-input" placeholder="Type your thoughts here... minimum 10–20 words recommended"></textarea>
+
+        <div class="bar">
+            <div id="status">SYSTEM READY</div>
+
+            <button onclick="sendMessage()" id="btn">
+                <span class="txt">ANALYZE MIND</span>
+                <div class="loader" id="loader"></div>
+            </button>
+        </div>
+
+    </div>
+
+    <div id="chat-box" class="result"></div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
